@@ -1,0 +1,561 @@
+report_country,targetgroup,population
+Albania,Age00-17,611364
+Albania,Age18-24,312602
+Albania,Age25-49,958115
+Albania,Age50-59,386091
+Albania,Age60-69,330242
+Albania,Age70-79,194668
+Albania,Age80+,84718
+Albania,1_Age<60,1656808
+Albania,1_Age60+,609628
+Albania,ALL,2266436
+Armenia,Age00-17,721381
+Armenia,Age18-24,242905
+Armenia,Age25-49,1089468
+Armenia,Age50-59,362653
+Armenia,Age60-69,328402
+Armenia,Age70-79,126743
+Armenia,Age80+,91682
+Armenia,1_Age<60,1695026
+Armenia,1_Age60+,546827
+Armenia,ALL,2241853
+Austria,Age00-17,1564408
+Austria,Age18-24,694743
+Austria,Age25-49,3028297
+Austria,Age50-59,1407000
+Austria,Age60-69,1033320
+Austria,Age70-79,790437
+Austria,Age80+,488195
+Austria,1_Age<60,5130040
+Austria,1_Age60+,2311952
+Austria,ALL,7441992
+Azerbaijan,Age00-17,2764329
+Azerbaijan,Age18-24,976294
+Azerbaijan,Age25-49,3937353
+Azerbaijan,Age50-59,1281076
+Azerbaijan,Age60-69,804308
+Azerbaijan,Age70-79,242762
+Azerbaijan,Age80+,133053
+Azerbaijan,1_Age<60,6194723
+Azerbaijan,1_Age60+,1180123
+Azerbaijan,ALL,7374846
+Belarus,Age00-17,1901593
+Belarus,Age18-24,596602
+Belarus,Age25-49,3468079
+Belarus,Age50-59,1345791
+Belarus,Age60-69,1243251
+Belarus,Age70-79,525562
+Belarus,Age80+,368443
+Belarus,1_Age<60,5410472
+Belarus,1_Age60+,2137256
+Belarus,ALL,7547728
+Belgium,Age00-17,2360011
+Belgium,Age18-24,912645
+Belgium,Age25-49,3750819
+Belgium,Age50-59,1598741
+Belgium,Age60-69,1369876
+Belgium,Age70-79,939413
+Belgium,Age80+,658111
+Belgium,1_Age<60,6262205
+Belgium,1_Age60+,2967400
+Belgium,ALL,9229605
+Bosnia and Herzegovina,Age00-17,571805
+Bosnia and Herzegovina,Age18-24,285850
+Bosnia and Herzegovina,Age25-49,1093227
+Bosnia and Herzegovina,Age50-59,500182
+Bosnia and Herzegovina,Age60-69,463795
+Bosnia and Herzegovina,Age70-79,242498
+Bosnia and Herzegovina,Age80+,123458
+Bosnia and Herzegovina,1_Age<60,1879259
+Bosnia and Herzegovina,1_Age60+,829751
+Bosnia and Herzegovina,ALL,2709010
+Bulgaria,Age00-17,1215266
+Bulgaria,Age18-24,419464
+Bulgaria,Age25-49,2410026
+Bulgaria,Age50-59,944704
+Bulgaria,Age60-69,922592
+Bulgaria,Age70-79,710368
+Bulgaria,Age80+,326025
+Bulgaria,1_Age<60,3774194
+Bulgaria,1_Age60+,1958985
+Bulgaria,ALL,5733179
+Croatia,Age00-17,712689
+Croatia,Age18-24,317324
+Croatia,Age25-49,1332362
+Croatia,Age50-59,581383
+Croatia,Age60-69,565378
+Croatia,Age70-79,361955
+Croatia,Age80+,234177
+Croatia,1_Age<60,2231069
+Croatia,1_Age60+,1161510
+Croatia,ALL,3392579
+Cyprus,Age00-17,242548
+Cyprus,Age18-24,124964
+Cyprus,Age25-49,453357
+Cyprus,Age50-59,147538
+Cyprus,Age60-69,120401
+Cyprus,Age70-79,78681
+Cyprus,Age80+,39872
+Cyprus,1_Age<60,725859
+Cyprus,1_Age60+,238954
+Cyprus,ALL,964813
+Czechia,Age00-17,1988712
+Czechia,Age18-24,657662
+Czechia,Age25-49,3910506
+Czechia,Age50-59,1351270
+Czechia,Age60-69,1324617
+Czechia,Age70-79,1031099
+Czechia,Age80+,445116
+Czechia,1_Age<60,5919438
+Czechia,1_Age60+,2800832
+Czechia,ALL,8720270
+Denmark,Age00-17,1144058
+Denmark,Age18-24,511865
+Denmark,Age25-49,1812513
+Denmark,Age50-59,810126
+Denmark,Age60-69,654530
+Denmark,Age70-79,586138
+Denmark,Age80+,272973
+Denmark,1_Age<60,3134504
+Denmark,1_Age60+,1513641
+Denmark,ALL,4648145
+Estonia,Age00-17,257768
+Estonia,Age18-24,81389
+Estonia,Age25-49,466115
+Estonia,Age50-59,165283
+Estonia,Age60-69,169472
+Estonia,Age70-79,107429
+Estonia,Age80+,79083
+Estonia,1_Age<60,712787
+Estonia,1_Age60+,355984
+Estonia,ALL,1068771
+Finland,Age00-17,1056898
+Finland,Age18-24,431694
+Finland,Age25-49,1725240
+Finland,Age50-59,720555
+Finland,Age60-69,712325
+Finland,Age70-79,582988
+Finland,Age80+,311018
+Finland,1_Age<60,2877489
+Finland,1_Age60+,1606331
+Finland,ALL,4483820
+France,Age00-17,13878602
+France,Age18-24,5229368
+France,Age25-49,20010727
+France,Age50-59,8635057
+France,Age60-69,7764786
+France,Age70-79,5727704
+France,Age80+,4027268
+France,1_Age<60,33875152
+France,1_Age60+,17519758
+France,ALL,51394910
+Georgia,Age00-17,938144
+Georgia,Age18-24,319489
+Georgia,Age25-49,1350307
+Georgia,Age50-59,523623
+Georgia,Age60-69,459858
+Georgia,Age70-79,248786
+Georgia,Age80+,148968
+Georgia,1_Age<60,2193419
+Georgia,1_Age60+,857612
+Georgia,ALL,3051031
+Germany,Age00-17,14113198
+Germany,Age18-24,6251758
+Germany,Age25-49,25939296
+Germany,Age50-59,13488393
+Germany,Age60-69,10644142
+Germany,Age70-79,7471414
+Germany,Age80+,5875744
+Germany,1_Age<60,45679447
+Germany,1_Age60+,23991300
+Germany,ALL,69670747
+Greece,Age00-17,1740538
+Greece,Age18-24,738860
+Greece,Age25-49,3438724
+Greece,Age50-59,1505694
+Greece,Age60-69,1257162
+Greece,Age70-79,956083
+Greece,Age80+,785995
+Greece,1_Age<60,5683278
+Greece,1_Age60+,2999240
+Greece,ALL,8682518
+Hungary,Age00-17,1682524
+Hungary,Age18-24,713192
+Hungary,Age25-49,3479102
+Hungary,Age50-59,1201388
+Hungary,Age60-69,1306432
+Hungary,Age70-79,846576
+Hungary,Age80+,431136
+Hungary,1_Age<60,5393682
+Hungary,1_Age60+,2584144
+Hungary,ALL,7977826
+Iceland,Age00-17,79269
+Iceland,Age18-24,30748
+Iceland,Age25-49,115396
+Iceland,Age50-59,42111
+Iceland,Age60-69,37536
+Iceland,Age70-79,23415
+Iceland,Age80+,12775
+Iceland,1_Age<60,188255
+Iceland,1_Age60+,73726
+Iceland,ALL,261981
+Ireland,Age00-17,1220158
+Ireland,Age18-24,410216
+Ireland,Age25-49,1736809
+Ireland,Age50-59,600933
+Ireland,Age60-69,480785
+Ireland,Age70-79,330663
+Ireland,Age80+,158232
+Ireland,1_Age<60,2747958
+Ireland,1_Age60+,969680
+Ireland,ALL,3717638
+Israel,Age00-17,2815486
+Israel,Age18-24,884646
+Israel,Age25-49,2735424
+Israel,Age50-59,795496
+Israel,Age60-69,703643
+Israel,Age70-79,459660
+Israel,Age80+,261186
+Israel,1_Age<60,4415566
+Israel,1_Age60+,1424489
+Israel,ALL,5840055
+Italy,Age00-17,9575938
+Italy,Age18-24,4095011
+Italy,Age25-49,19181368
+Italy,Age50-59,9567192
+Italy,Age60-69,7484862
+Italy,Age70-79,6028908
+Italy,Age80+,4528549
+Italy,1_Age<60,32843571
+Italy,1_Age60+,18042319
+Italy,ALL,50885890
+Kazakhstan,Age00-17,6174407
+Kazakhstan,Age18-24,1514572
+Kazakhstan,Age25-49,6753062
+Kazakhstan,Age50-59,2039441
+Kazakhstan,Age60-69,1438909
+Kazakhstan,Age70-79,552505
+Kazakhstan,Age80+,303811
+Kazakhstan,1_Age<60,10307075
+Kazakhstan,1_Age60+,2295225
+Kazakhstan,ALL,12602300
+Kyrgyzstan,Age00-17,2434130
+Kyrgyzstan,Age18-24,710410
+Kyrgyzstan,Age25-49,2269691
+Kyrgyzstan,Age50-59,581435
+Kyrgyzstan,Age60-69,363824
+Kyrgyzstan,Age70-79,111214
+Kyrgyzstan,Age80+,53487
+Kyrgyzstan,1_Age<60,3561536
+Kyrgyzstan,1_Age60+,528525
+Kyrgyzstan,ALL,4090061
+Latvia,Age00-17,364991
+Latvia,Age18-24,101033
+Latvia,Age25-49,635801
+Latvia,Age50-59,264242
+Latvia,Age60-69,250144
+Latvia,Age70-79,162704
+Latvia,Age80+,107287
+Latvia,1_Age<60,1001076
+Latvia,1_Age60+,520135
+Latvia,ALL,1521211
+Lithuania,Age00-17,494028
+Lithuania,Age18-24,183133
+Lithuania,Age25-49,876707
+Lithuania,Age50-59,420558
+Lithuania,Age60-69,352811
+Lithuania,Age70-79,223283
+Lithuania,Age80+,171771
+Lithuania,1_Age<60,1480398
+Lithuania,1_Age60+,747865
+Lithuania,ALL,2228263
+Luxembourg,Age00-17,117486
+Luxembourg,Age18-24,54156
+Luxembourg,Age25-49,238614
+Luxembourg,Age50-59,90856
+Luxembourg,Age60-69,62123
+Luxembourg,Age70-79,37873
+Luxembourg,Age80+,24868
+Luxembourg,1_Age<60,383626
+Luxembourg,1_Age60+,124864
+Luxembourg,ALL,508490
+Malta,Age00-17,75477
+Malta,Age18-24,33602
+Malta,Age25-49,154961
+Malta,Age50-59,53212
+Malta,Age60-69,57680
+Malta,Age70-79,45166
+Malta,Age80+,21441
+Malta,1_Age<60,241775
+Malta,1_Age60+,124287
+Malta,ALL,366062
+Montenegro,Age00-17,136697
+Montenegro,Age18-24,57051
+Montenegro,Age25-49,215198
+Montenegro,Age50-59,80320
+Montenegro,Age60-69,76945
+Montenegro,Age70-79,40438
+Montenegro,Age80+,21413
+Montenegro,1_Age<60,352569
+Montenegro,1_Age60+,138796
+Montenegro,ALL,491365
+Netherlands,Age00-17,3296302
+Netherlands,Age18-24,1430900
+Netherlands,Age25-49,5325700
+Netherlands,Age50-59,2524072
+Netherlands,Age60-69,2129501
+Netherlands,Age70-79,1591524
+Netherlands,Age80+,836874
+Netherlands,1_Age<60,9280672
+Netherlands,1_Age60+,4557899
+Netherlands,ALL,13838571
+North Macedonia,Age00-17,411532
+North Macedonia,Age18-24,179765
+North Macedonia,Age25-49,778567
+North Macedonia,Age50-59,282832
+North Macedonia,Age60-69,244646
+North Macedonia,Age70-79,133883
+North Macedonia,Age80+,52155
+North Macedonia,1_Age<60,1241164
+North Macedonia,1_Age60+,430684
+North Macedonia,ALL,1671848
+Norway,Age00-17,1126285
+Norway,Age18-24,484338
+Norway,Age25-49,1836768
+Norway,Age50-59,712508
+Norway,Age60-69,586156
+Norway,Age70-79,446448
+Norway,Age80+,228739
+Norway,1_Age<60,3033614
+Norway,1_Age60+,1261343
+Norway,ALL,4294957
+Poland,Age00-17,6802147
+Poland,Age18-24,2657843
+Poland,Age25-49,14005939
+Poland,Age50-59,4563168
+Poland,Age60-69,5174147
+Poland,Age70-79,2900526
+Poland,Age80+,1742835
+Poland,1_Age<60,21226950
+Poland,1_Age60+,9817508
+Poland,ALL,31044458
+Portugal,Age00-17,1643216
+Portugal,Age18-24,752860
+Portugal,Age25-49,3325084
+Portugal,Age50-59,1481007
+Portugal,Age60-69,1293824
+Portugal,Age70-79,1018314
+Portugal,Age80+,682402
+Portugal,1_Age<60,5558951
+Portugal,1_Age60+,2994540
+Portugal,ALL,8553491
+Republic of Moldova,Age00-17,761167
+Republic of Moldova,Age18-24,323295
+Republic of Moldova,Age25-49,1666399
+Republic of Moldova,Age50-59,521015
+Republic of Moldova,Age60-69,488289
+Republic of Moldova,Age70-79,184989
+Republic of Moldova,Age80+,88809
+Republic of Moldova,1_Age<60,2510709
+Republic of Moldova,1_Age60+,762087
+Republic of Moldova,ALL,3272796
+Romania,Age00-17,3588081
+Romania,Age18-24,1402149
+Romania,Age25-49,6688755
+Romania,Age50-59,2569158
+Romania,Age60-69,2535948
+Romania,Age70-79,1530269
+Romania,Age80+,923322
+Romania,1_Age<60,10660062
+Romania,1_Age60+,4989539
+Romania,ALL,15649601
+Russian Federation,Age00-17,31173305
+Russian Federation,Age18-24,9320035
+Russian Federation,Age25-49,53836961
+Russian Federation,Age50-59,18897666
+Russian Federation,Age60-69,18501369
+Russian Federation,Age70-79,8549718
+Russian Federation,Age80+,5655406
+Russian Federation,1_Age<60,82054662
+Russian Federation,1_Age60+,32706493
+Russian Federation,ALL,114761155
+Serbia,Age00-17,1648559
+Serbia,Age18-24,736161
+Serbia,Age25-49,3018075
+Serbia,Age50-59,1121508
+Serbia,Age60-69,1142471
+Serbia,Age70-79,729682
+Serbia,Age80+,340914
+Serbia,1_Age<60,4875744
+Serbia,1_Age60+,2213067
+Serbia,ALL,7088811
+Slovakia,Age00-17,1006763
+Slovakia,Age18-24,396028
+Slovakia,Age25-49,2074083
+Slovakia,Age50-59,709217
+Slovakia,Age60-69,695211
+Slovakia,Age70-79,398711
+Slovakia,Age80+,179630
+Slovakia,1_Age<60,3179328
+Slovakia,1_Age60+,1273552
+Slovakia,ALL,4452880
+Slovenia,Age00-17,370300
+Slovenia,Age18-24,132563
+Slovenia,Age25-49,698153
+Slovenia,Age50-59,301202
+Slovenia,Age60-69,284941
+Slovenia,Age70-79,177495
+Slovenia,Age80+,114278
+Slovenia,1_Age<60,1131918
+Slovenia,1_Age60+,576714
+Slovenia,ALL,1708632
+Spain,Age00-17,8092325
+Spain,Age18-24,3134148
+Spain,Age25-49,16202182
+Spain,Age50-59,7046327
+Spain,Age60-69,5340654
+Spain,Age70-79,4015306
+Spain,Age80+,2923841
+Spain,1_Age<60,26382657
+Spain,1_Age60+,12279801
+Spain,ALL,38662458
+Sweden,Age00-17,2109618
+Sweden,Age18-24,755246
+Sweden,Age25-49,3317566
+Sweden,Age50-59,1296647
+Sweden,Age60-69,1093868
+Sweden,Age70-79,994244
+Sweden,Age80+,532081
+Sweden,1_Age<60,5369459
+Sweden,1_Age60+,2620193
+Sweden,ALL,7989652
+Switzerland,Age00-17,1544676
+Switzerland,Age18-24,659322
+Switzerland,Age25-49,2941355
+Switzerland,Age50-59,1320622
+Switzerland,Age60-69,977435
+Switzerland,Age70-79,751993
+Switzerland,Age80+,459215
+Switzerland,1_Age<60,4921299
+Switzerland,1_Age60+,2188643
+Switzerland,ALL,7109942
+Tajikistan,Age00-17,4046877
+Tajikistan,Age18-24,1152903
+Tajikistan,Age25-49,3087449
+Tajikistan,Age50-59,700890
+Tajikistan,Age60-69,387890
+Tajikistan,Age70-79,117606
+Tajikistan,Age80+,44027
+Tajikistan,1_Age<60,4941242
+Tajikistan,1_Age60+,549523
+Tajikistan,ALL,5490765
+Turkey,Age00-17,24281352
+Turkey,Age18-24,9503086
+Turkey,Age25-49,30625454
+Turkey,Age50-59,8908423
+Turkey,Age60-69,6192392
+Turkey,Age70-79,3353579
+Turkey,Age80+,1474781
+Turkey,1_Age<60,49036963
+Turkey,1_Age60+,11020752
+Turkey,ALL,60057715
+Turkmenistan,Age00-17,2152151
+Turkmenistan,Age18-24,651059
+Turkmenistan,Age25-49,2203960
+Turkmenistan,Age50-59,535459
+Turkmenistan,Age60-69,334444
+Turkmenistan,Age70-79,103458
+Turkmenistan,Age80+,50656
+Turkmenistan,1_Age<60,3390478
+Turkmenistan,1_Age60+,488558
+Turkmenistan,ALL,3879036
+Ukraine,Age00-17,8199595
+Ukraine,Age18-24,2919480
+Ukraine,Age25-49,16367806
+Ukraine,Age50-59,5906737
+Ukraine,Age60-69,5539856
+Ukraine,Age70-79,2983430
+Ukraine,Age80+,1816855
+Ukraine,1_Age<60,25194023
+Ukraine,1_Age60+,10340141
+Ukraine,ALL,35534164
+Uzbekistan,Age00-17,11164583
+Uzbekistan,Age18-24,3792331
+Uzbekistan,Age25-49,12672346
+Uzbekistan,Age50-59,3068761
+Uzbekistan,Age60-69,1939628
+Uzbekistan,Age70-79,572150
+Uzbekistan,Age80+,259400
+Uzbekistan,1_Age<60,19533438
+Uzbekistan,1_Age60+,2771178
+Uzbekistan,ALL,22304616
+United Kingdom (England),1_Age<60,30832651
+United Kingdom (England),1_Age60+,13346635
+United Kingdom (England),Age00-17,11992016
+United Kingdom (England),Age18-24,4770142
+United Kingdom (England),Age25-49,18522965
+United Kingdom (England),Age50-59,7539544
+United Kingdom (England),Age60-69,5894156
+United Kingdom (England),Age70-79,4655903
+United Kingdom (England),Age80+,2796576
+United Kingdom (England),ALL,44179286
+United Kingdom (Northern Ireland),1_Age<60,1031081
+United Kingdom (Northern Ireland),1_Age60+,407744
+United Kingdom (Northern Ireland),Age00-17,437132
+United Kingdom (Northern Ireland),Age18-24,163928
+United Kingdom (Northern Ireland),Age25-49,614808
+United Kingdom (Northern Ireland),Age50-59,252345
+United Kingdom (Northern Ireland),Age60-69,190472
+United Kingdom (Northern Ireland),Age70-79,138176
+United Kingdom (Northern Ireland),Age80+,79096
+United Kingdom (Northern Ireland),ALL,1438825
+United Kingdom (Scotland),1_Age<60,3045787
+United Kingdom (Scotland),1_Age60+,1375588
+United Kingdom (Scotland),Age00-17,1032863
+United Kingdom (Scotland),Age18-24,467881
+United Kingdom (Scotland),Age25-49,1785250
+United Kingdom (Scotland),Age50-59,792656
+United Kingdom (Scotland),Age60-69,640452
+United Kingdom (Scotland),Age70-79,468433
+United Kingdom (Scotland),Age80+,266703
+United Kingdom (Scotland),ALL,4421375
+United Kingdom (Wales),1_Age<60,1658386
+United Kingdom (Wales),1_Age60+,850251
+United Kingdom (Wales),Age00-17,627746
+United Kingdom (Wales),Age18-24,280900
+United Kingdom (Wales),Age25-49,944310
+United Kingdom (Wales),Age50-59,433176
+United Kingdom (Wales),Age60-69,372514
+United Kingdom (Wales),Age70-79,301807
+United Kingdom (Wales),Age80+,175930
+United Kingdom (Wales),ALL,2508637
+Andorra,Age00-17,12945
+Andorra,Age18-24,5706
+Andorra,Age25-49,30019
+Andorra,Age50-59,12718
+Andorra,Age60-69,7776
+Andorra,Age70-79,4453
+Andorra,Age80+,2560
+Monaco,ALL,33085
+Serbia,Age00-17,1204272
+Serbia,Age18-24,508394
+Serbia,Age25-49,2337465
+Serbia,Age50-59,933621
+Serbia,Age60-69,1005089
+Serbia,Age70-79,614223
+Serbia,Age80+,323641
+Serbia,ALL,6926705
+San Marino,Age00-17,5926
+San Marino,Age18-24,2293
+San Marino,Age25-49,11745
+San Marino,Age50-59,5778
+San Marino,Age60-69,3932
+San Marino,Age70-79,2830
+San Marino,Age80+,1949
+Kosovo,Age00-17,533436
+Kosovo,Age18-24,224015
+Kosovo,Age25-49,631521
+Kosovo,Age50-59,183670
+Kosovo,Age60-69,122972
+Kosovo,Age70-79,68223
+Kosovo,Age80+,31829
