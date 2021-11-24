@@ -3,7 +3,7 @@
  
  Authors: Margaux Mesle (meslem@who.int) with help from Jeremy Brown
  
- The repository accompanies the manuscript entitled: "Number of deaths averted as a result of COVID-19 vaccination programs in the WHO European Region between December 2020 and August 2021" 
+ The repository accompanies the manuscript entitled: "Number of deaths directly averted as a result of COVID-19 vaccination programs in the WHO European Region between December 2020 and November 2021" 
  
  Please note that aggregated, weekly country level, age-group specific data will need to be provided as well as weekly, country level, age group specific vaccination data for the script to run. 
  
