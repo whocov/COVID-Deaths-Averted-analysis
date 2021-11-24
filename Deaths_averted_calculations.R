@@ -10,7 +10,7 @@ restrict.vaccine.data <- function(vax_clean) {
   print(unique(vax_clean$pretty_targetgroup))
   
 
-  # Restrict vaccination data to countries of interest and calculate number of doses
+  # Restrict vaccination data
   vax_lim <- vax_clean %>%
     dplyr::select(report_country, year_week, pretty_targetgroup, derived_denominator, dosefirst, dosesecond) %>%
     filter(report_country%in% country_list$countries) %>%
@@ -64,7 +64,6 @@ calculate.regional.vaccinations <- function(vax_lim) {
     distinct() 
   Region.total.denom <- max(RegTotalDenom$totalDenom)
   
-  # Calculate regional vaccination coverage for both doses
   vax_coverage_rgn <- vax_lim %>%
     mutate(FirstDose=ifelse(is.na(FirstDose), 0, FirstDose),
            SecondDose=ifelse(is.na(SecondDose), 0, SecondDose)) %>%
@@ -108,7 +107,7 @@ calculate.expected.cases <- function(deaths_age, vax_lim, age.group, country_lis
     Expected_cases <- Expected_cases[!Expected_cases$report_country=="Ukraine",]
   } 
   
-  # Make sure all countries are included, sorted by date and all have a denominator
+  
   Expected_cases <- Expected_cases %>%
     filter(!report_country %in% country) %>%
     arrange(report_country, year_week) %>%
@@ -117,7 +116,7 @@ calculate.expected.cases <- function(deaths_age, vax_lim, age.group, country_lis
   
     Expected_cases <- Expected_cases %>%
       mutate(DeathsObserved=replace_na(DeathsObserved, 0),
-             DeathsObserved.roll=rollmean(DeathsObserved, k=3, align="center", fill=NA), # Add 3 weeks rolling average number of deaths
+             DeathsObserved.roll=rollmean(DeathsObserved, k=3, align="center", fill=NA),
              FirstDose=replace_na(FirstDose, 0),
              SecondDose=replace_na(SecondDose, 0),
              dosefirst=cumsum(FirstDose),
@@ -127,7 +126,6 @@ calculate.expected.cases <- function(deaths_age, vax_lim, age.group, country_lis
              uptakefirst.lag = lag(uptakefirst, n=weeks.lag.1, default=0),
              uptakesecond.lag = lag(uptakesecond, n=weeks.lag.2, default=0),
              uptakefirstonly.lag = pmax(uptakefirst.lag - uptakesecond.lag, 0),
-             # Add lags to each vaccine dose calculation
              DeathsAvertedDose1 = DeathsObserved.roll * ((uptakefirstonly.lag * VE1)/(1 - uptakefirstonly.lag*VE1 - uptakesecond.lag*VE2)),
              DeathsAvertedDose2 = DeathsObserved.roll * ((uptakesecond.lag * VE2)/(1 - uptakefirstonly.lag*VE1 - uptakesecond.lag*VE2)),
              TotalAverted = DeathsAvertedDose1 + DeathsAvertedDose2,
