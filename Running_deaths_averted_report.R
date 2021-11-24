@@ -1,7 +1,7 @@
 # Script to calculate number of death as averted from COVID-19 vaccination programs in WHO European Region
 # Margaux Mesle - meslem@who.int
 # First created: June 2021
-# Lastest update: September 2021
+# Latest update: November 2021
 
 #To calculate the number of deaths averted by vaccination, we need three sets of information:
 #  - Number of deaths that occurred in country, by age group, in given weeks
@@ -40,21 +40,21 @@
   # USER INPUT #
   ##############
   # Set reporting week as the latest week with data available
-  reporting.week <- "2021-W35"
+  reporting.week <- "2021-W45"
   
   # Determine whether interested in single age-group (60-69, 70-79, 80+) or over 60
     # COMMENT AND UNCOMMENT ACCORDINGLY 
   # Vaccination data
-  #age.group.vax <- c("Age60-69", "Age70-79", "Age80+")  
+  age.group.vax <- c("Age60-69", "Age70-79", "Age80+")  
   #age.group.vax <- c("Age60-69") 
   #age.group.vax <- c("Age70-79") 
-  age.group.vax <- c("Age80+") 
+  #age.group.vax <- c("Age80+") 
   
   # Mortality data
-  #age.group <- c("60-69", "70-79", "80+")
+  age.group <- c("60-69", "70-79", "80+")
   #age.group <- c("60-69")
   #age.group <- c("70-79")
-  age.group <- c("80+")
+  #age.group <- c("80+")
   
  
   ####################
@@ -95,8 +95,8 @@
   ################################
   
   # Define x axis and colours for plotting
-  week_breaks=c("2020-51", "2021-01", "2021-05", "2021-10", "2021-15", "2021-20", "2021-25", "2021-30", "2021-35")
-  week_labels=c("51", "1\n2021", "5", "10", "15", "20", "25", "30", "35")
+  week_breaks=c("2020-51", "2021-01", "2021-05", "2021-10", "2021-15", "2021-20", "2021-25", "2021-30", "2021-35", "2021-40", "2021-45")
+  week_labels=c("51", "1\n2021", "5", "10", "15", "20", "25", "30", "35", "40", "45")
   colours =c("#558ed5", "#c3d69b")
   
   
@@ -105,12 +105,20 @@
   ####################################
   
   # Set Vaccine Effectiveness (VE) values: 60% and 95%
+  # Is the value for the sensitivity analysis?
+  # IF yes: Low values: VE1=0.50 and VE2=0.70
+          # High values: VE1=0.70 and VE2=0.975
+  
   VE1 = 0.60 # First dose
   VE2 = 0.95 # Second dose
   
-  # Set lag weeks used in analysis (representing immune response and reporting delay): 3 and 1
-  weeks.lag.1 = 3 # after first dose
-  weeks.lag.2 = 1 # after first dose
+  # Set lag weeks used in analysis (representing immune response and reporting delay): 4 and 3
+  # For sensitivity timing analysis, replace lag values values above with 
+  # IF yes: short values: weeks.lag.1=3 and weeks.lag.2=2
+          # Long values: weeks.lag.1=5 and weeks.lag.2=4
+  
+  weeks.lag.1 = 4 # after first dose
+  weeks.lag.2 = 3 # after second dose
   
   
   # Remove countries without enough data to be used
@@ -131,6 +139,11 @@
   ################  
     # Helper data sets
   Vax_denom <- read.csv("Data/un_vaccine_age_group_denominators_2020_all.csv",header = TRUE, stringsAsFactors = FALSE)
+  Vax_denom <- Vax_denom %>%
+    mutate(population=ifelse(report_country=="Israel" & targetgroup=="Age60-69", 741639, population),
+           population=ifelse(report_country=="Israel" & targetgroup=="Age70-79", 490784, population),
+           population=ifelse(report_country=="Israel" & targetgroup=="Age80+", 277034, population))
+  
   country_codes <- read.csv("Data/CountryCode.csv", header=T, stringsAsFactors = F)
   
     # data sets
@@ -183,12 +196,12 @@
   if(length(age.group.vax)>1) {
     # Vaccination overview
   country.vaccination.curves <- plot.country.vaccination.curves(vax_coverage_cnty, figure="A")
-    ggsave(paste0("Deaths_averted_Fig1A_",reporting.week,".png"), width = 10, height = 7)
+    ggsave(paste0("Deaths_averted_Fig1A_",reporting.week,".pdf"), width = 12, height = 10, dpi = 1000)
   country.vaccination.curves.age <- plot.country.vaccination.curves(vax_coverage_cnty, figure="B")
-    ggsave(paste0("Deaths_averted_Fig1B_",reporting.week,".png"), width = 10, height = 7)
+    ggsave(paste0("Deaths_averted_Fig1B_",reporting.week,".pdf"), width = 15, height = 10, dpi = 1000)
     # Regional overview
   expected.mortality <- plot.expected.mortality(Expected_cases, country_summary, age.group)
-    ggsave(paste0("Deaths_averted_Fig2_",reporting.week,".png"), width = 12, height = 7)
+    ggsave(paste0("Deaths_averted_Fig2_",reporting.week,".pdf"), width = 15, height = 10, dpi = 1000)
   }
   
   #############################################################
@@ -213,6 +226,8 @@
   # High values: VE1=0.7 and VE2=0.957
   
   # For timing analysis, replace lag values values above with 
-  # short values: weeks.lag.1=2 and weeks.lag.2=1
-  # Long values: weeks.lag.1=4 and weeks.lag.2=2
+  # short values: weeks.lag.1=3 and weeks.lag.2=2
+  # Long values: weeks.lag.1=5 and weeks.lag.2=4
+  
+  write.csv(summary.table, "Sensitivity_analyses_summary.csv")
   
