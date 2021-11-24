@@ -41,6 +41,13 @@
   ##############
   # Set reporting week as the latest week with data available
   reporting.week <- "2021-W45"
+  # Name last month of reporting - this is used in figure titles
+  current.month <- "November"
+  
+  # Determine if running analysis or sensitivity analyses
+    # If yes, choose fro, the following: yes_VE_low, yes_VE_high, yes_lag_short, yes_lag_long
+  sensitivity <- "no"
+  # sensitivity <- "yes_VE_low"
   
   # Determine whether interested in single age-group (60-69, 70-79, 80+) or over 60
     # COMMENT AND UNCOMMENT ACCORDINGLY 
@@ -70,24 +77,8 @@
   source(here::here("R", "plot_regional_vaccination_curves.R"))
   source(here::here("R", "Create_table_1.R"))
   source(here::here("R", "Create_table_2.R"))
+  source(here::here("R", "Create_sensitivity_analyses_summary_table.R"))
   
-  
-  # Allow cumulative counting while keeping NAs
-  cumsum_keep_na <- function(x) {
-    if (all(is.na(x))) {
-      return(NA)
-    } else {
-      return(cumsum(x, na.rm=TRUE))
-    }
-  }
-  # Allow counting while keeping NAs
-  sum_keep_na <- function(x) {
-    if (all(is.na(x))) {
-      return(NA)
-    } else {
-      return(sum(x, na.rm=TRUE))
-    }
-  }
   
   
   ################################
@@ -108,17 +99,39 @@
   # Is the value for the sensitivity analysis?
   # IF yes: Low values: VE1=0.50 and VE2=0.70
           # High values: VE1=0.70 and VE2=0.975
+  if(sensitivity=="no"){
+    VE1 = 0.60 # First dose
+    VE2 = 0.95 # Second dose
+  } 
   
-  VE1 = 0.60 # First dose
-  VE2 = 0.95 # Second dose
+  if(sensitivity=="yes_VE_low") {
+    VE1 = 0.50 # First dose
+    VE2 = 0.70 # Second dose
+  }
+  
+  if(sensitivity=="yes_VE_high") {
+    VE1 = 0.70 # First dose
+    VE2 = 0.975 # Second dose
+  }
   
   # Set lag weeks used in analysis (representing immune response and reporting delay): 4 and 3
   # For sensitivity timing analysis, replace lag values values above with 
   # IF yes: short values: weeks.lag.1=3 and weeks.lag.2=2
           # Long values: weeks.lag.1=5 and weeks.lag.2=4
+  if(sensitivity=="no"){
+    weeks.lag.1 = 4 # after first dose
+    weeks.lag.2 = 3 # after second dose
+  }
   
-  weeks.lag.1 = 4 # after first dose
-  weeks.lag.2 = 3 # after second dose
+  if(sensitivity=="yes_lag_short"){
+    weeks.lag.1 = 3 # after first dose
+    weeks.lag.2 = 2 # after second dose
+  }
+  
+  if(sensitivity=="yes_lag_long"){
+    weeks.lag.1 = 5 # after first dose
+    weeks.lag.2 = 4 # after second dose
+  }
   
   
   # Remove countries without enough data to be used
@@ -212,22 +225,46 @@
   vax_countries <- read.csv("vaccinations_by_countries.csv", header = TRUE, stringsAsFactors = FALSE)
   
   Table.1 <- create.table1(vax_countries) 
-  write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,".csv"))
+  if(sensitivity=="no") {
+    write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,".csv"))
+  }
+  if(sensitivity=="yes_VE_low") {
+    write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,"_low_VE.csv"))
+  }
+  if(sensitivity=="yes_VE_high") {
+    write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,"_high_VE.csv"))
+  }
+  if(sensitivity=="yes_lag_short") {
+    write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,"_short_lag.csv"))
+  }
+  if(sensitivity=="yes_lag_long") {
+    write.csv(Table.1, paste0("Deaths_averted_table1_", reporting.week,"_long_lag.csv"))
+  }
+  
   
   Table.2 <- create.table2(vax_countries) 
-  write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,".csv"))
+  if(sensitivity=="no"){
+    write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,".csv"))
+  }
+  if(sensitivity=="yes_VE_low"){
+    write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,"_low_VE.csv"))
+  }
+  if(sensitivity=="yes_VE_high"){
+    write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,"_high_VE.csv"))
+  }
+  if(sensitivity=="yes_lag_short"){
+    write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,"_short_lag.csv"))
+  }
+  if(sensitivity=="yes_lag_long"){
+    write.csv(Table.2, paste0("Deaths_averted_table2_", reporting.week,"_long_lag.csv"))
+  }
   
   #############################################################
   # Run sensitivity analyses                                  # 
   # ONLY WHEN ALL CODE FOR SINGLE AGE GROUPS HAVE BEEN RUN!!! #
   #############################################################
   # For VE analysis, replace VE values above with 
-  # Low values: VE1=0.5 and VE2=0.7
-  # High values: VE1=0.7 and VE2=0.957
   
-  # For timing analysis, replace lag values values above with 
-  # short values: weeks.lag.1=3 and weeks.lag.2=2
-  # Long values: weeks.lag.1=5 and weeks.lag.2=4
-  
+  summary.table <- create.sensitivity.analyses.summary(reporting.week)
   write.csv(summary.table, "Sensitivity_analyses_summary.csv")
   
