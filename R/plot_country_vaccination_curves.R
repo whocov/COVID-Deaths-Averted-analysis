@@ -6,7 +6,8 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
   
   vax_coverage_cnty <- vax_coverage_cnty %>%
     mutate(report_country=ifelse(report_country=="United Kingdom (Scotland)", "United Kingdom\n(Scotland)", report_country)) %>%
-    mutate(report_country=ifelse(report_country=="United Kingdom (England)", "United Kingdom\n(England)", report_country))
+    mutate(report_country=ifelse(report_country=="United Kingdom (England)", "United Kingdom\n(England)", report_country)) %>%
+    mutate(percentage=ifelse(percentage>100, 100, percentage))
   
   
   if(figure=="A") {
@@ -14,7 +15,9 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
   curves <- ggplot(vax_coverage_cnty, 
                    aes(year_week, percentage, group=DoseNo, colour=DoseNo) )+
     geom_line(size=1) +
-    facet_wrap(.~ report_country) +
+    geom_hline(yintercept = c(60, 95), col="black", size=0.3) +
+    facet_wrap(.~ report_country, scales = "free_x") +
+    scale_y_continuous(limits = c(0,100), breaks = seq(0,100,25)) +
     scale_x_discrete(breaks=week_breaks, labels=week_labels) +
     scale_colour_manual(name="Dosage",
                         values = colours, 
@@ -22,7 +25,7 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
     labs(x="Week",
          y="Vaccination Uptake %") +
     theme_minimal() +
-    labs(subtitle = paste0("A. Vaccination Uptake in population aged 60 and over in 33 WHO Europe countries between December 2020 and August 2021"))
+    labs(subtitle = paste0("1A. Vaccination Uptake in population aged 60 and over in 33 WHO Europe countries between December 2020 and November 2021\nBlack horizontal lines represent 60% and (95% vaccination coverage respectively."))
     
       
   } else if(figure=="B") {
@@ -47,12 +50,13 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
       full_join(select.countries) %>%
       mutate(report_country=ifelse(report_country=="United Kingdom (Scotland)", "United Kingdom\n(Scotland)", report_country)) %>%
       mutate(report_country=ifelse(report_country=="United Kingdom (England)", "United Kingdom\n(England)", report_country)) %>%
-      mutate(uptakesecond=uptakesecond*100)
+      mutate(uptakesecond=uptakesecond*100) 
     
     curves <- ggplot(age6080, aes(year_week, uptakesecond, group=age, colour=age)) +
       geom_line(size=1) +
-      facet_wrap(.~ report_country) +
+      facet_wrap(.~ report_country, scales="free_x") +
       scale_x_discrete(breaks=week_breaks, labels=week_labels) +
+      scale_y_continuous(limits = c(0,100), breaks = seq(0,100,25)) +
       scale_colour_manual(name="Age group",
                           values = c("#c6d9f1", "#558ed5", "#1f497d", "#6BBABF"), 
                           labels=c("60_69"="60-69 years", "70_79"="70-79 years", "80+"="over 80 years", "over60"="over 60 years")) +
@@ -60,7 +64,7 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
            x="Week",
            y="Vaccination uptake %") +
       theme_minimal() +
-      labs(subtitle =paste0("B. Cumulative complete vaccination uptake by age group (where available) in 33 WHO Europe countries\nbetween December 2020 and August 2021"))
+      labs(subtitle =paste0("1B. Cumulative complete Vaccination Uptake by age group (where available) in population aged 60 and over in 33 WHO Europe countries between December 2020 and November 2021"))
  
     
   }
