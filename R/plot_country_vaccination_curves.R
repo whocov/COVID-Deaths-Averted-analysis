@@ -25,7 +25,7 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
     labs(x="Week",
          y="Vaccination Uptake %") +
     theme_minimal() +
-    labs(subtitle = paste0("1A. Vaccination Uptake in population aged 60 and over in 33 WHO Europe countries between December 2020 and November 2021\nBlack horizontal lines represent 60% and (95% vaccination coverage respectively."))
+    labs(subtitle = paste0("1A. Vaccination Uptake in population aged 60 and over in 33 WHO Europe countries between December 2020 and ", current.month ,"2021\nBlack horizontal lines represent 60% and (95% vaccination coverage respectively."))
     
       
   } else if(figure=="B") {
@@ -64,7 +64,7 @@ plot.country.vaccination.curves <- function(vax_coverage_cnty, figure="A") {
            x="Week",
            y="Vaccination uptake %") +
       theme_minimal() +
-      labs(subtitle =paste0("1B. Cumulative complete Vaccination Uptake by age group (where available) in population aged 60 and over in 33 WHO Europe countries between December 2020 and November 2021"))
+      labs(subtitle =paste0("1B. Cumulative complete Vaccination Uptake by age group (where available) in population aged 60 and over in 33 WHO Europe countries between December 2020 and ", current.month ," 2021"))
  
     
   }
