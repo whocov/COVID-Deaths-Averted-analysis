@@ -40,7 +40,7 @@ plot.expected.mortality <- function(Expected_cases, country_summary, age.group) 
                           labels=c("start"="Start of vaccination",
                                    "z10pp"="First 10% doses administered\n(first doses only)"),
                           values = c("solid","dashed")) +
-    facet_wrap(.~ report_country, scales = "free_y") +
+    facet_wrap(.~ report_country, scales = "free") +
     scale_x_discrete(breaks=week_breaks, labels=week_labels) +
     guides(colour=guide_legend(order=1),
            shape=guide_legend(order=2)) +
@@ -50,10 +50,10 @@ plot.expected.mortality <- function(Expected_cases, country_summary, age.group) 
   
   if(length(age.group==1)) {
     Cases <- Cases +
-      labs(subtitle = "Observed and averted mortality in population aged 60 years and over ")
+      labs(subtitle = "2. Observed and averted mortality in population aged 60 years and over ")
   } else  if(length(age.group>1)) {
     Cases <- Cases +
-      labs(subtitle = paste0("Observed and averted mortality in age group: ", age.group))
+      labs(subtitle = paste0("2. Observed and averted mortality in age group: ", age.group))
     
   }
   
