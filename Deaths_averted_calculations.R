@@ -1,7 +1,7 @@
 # Functions to calculate number of deaths averted from COVID vaccinations
 # Margaux Mesle - meslem@who.int
 # First created: June 2021
-# Lastest update: September 2021
+# Lastest update: November 2021
 
 
 
