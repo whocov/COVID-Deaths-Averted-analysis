@@ -2,6 +2,23 @@
 # Margaux Mesle - meslem@who.int
 # June 2021
 
+# Allow cumulative counting while keeping NAs
+cumsum_keep_na <- function(x) {
+  if (all(is.na(x))) {
+    return(NA)
+  } else {
+    return(cumsum(x, na.rm=TRUE))
+  }
+}
+# Allow counting while keeping NAs
+sum_keep_na <- function(x) {
+  if (all(is.na(x))) {
+    return(NA)
+  } else {
+    return(sum(x, na.rm=TRUE))
+  }
+}
+
 
 
 assign.country.names <- function(data) {
